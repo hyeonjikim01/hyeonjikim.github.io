@@ -209,6 +209,7 @@
       <h2><span>03</span>Methodology &amp; Summary</h2>
       <ul>
         <li><b>Data:</b> Kaggle "Luxury Beauty Cosmetics Pop-up Events KPI 2025" (2,133 events, 15 variables), cleaned and grouped by product category and season.</li>
+        <li><b>Revenue:</b> product price × units sold. The raw data has no revenue column.</li>
         <li><b>RPV (revenue per visitor):</b> revenue ÷ total footfall during the event. It measures average revenue per visitor, including non-buyers, and helps compare revenue generation across locations.</li>
         <li><b>Tests:</b> correlation, one- and two-way ANOVA, multiple regression, and 95% confidence intervals to answer distinct questions about location, event type, and price.</li>
       </ul>
@@ -236,7 +237,7 @@
       </div>
       <ul>
         <li><b>More foot traffic did not mean more revenue.</b> High-Street attracted 2.04 times as many visitors as Art/Design District but generated about 10% less revenue, resulting in revenue per visitor (RPV) of $3.63 vs. $9.92.</li>
-        <li><b>Price was the strongest predictor of revenue.</b> Price alone explained 53% of the differences in revenue. Adding location, event type, brand and five other variables raised this only to 54%.</li>
+        <li><b>Price was the strongest predictor of revenue.</b> Price alone explained 53% of the differences in revenue (calculated as product price × units sold). Adding location, event type, brand and five other variables raised this only to 54%.</li>
         <li><b>Event type affected sell-through, but not revenue.</b> Flash events had a sell-through rate 4.1 percentage points higher than mall kiosks, with no statistically significant difference in revenue.</li>
       </ul>
       <figure>
@@ -249,10 +250,11 @@
     <section id="decision">
       <h2><span>05</span>From Analysis to Decision</h2>
       <ul>
-        <li><b>Prioritize cost over foot traffic when choosing locations.</b> Revenue did not differ significantly across locations, so lower-rent sites may be worth considering before high-traffic ones.</li>
-        <li><b>Optimize product mix to meet revenue targets.</b> For example, adjust the share of higher-priced products, such as perfumes and serums, rather than relying on a prime location.</li>
+        <li><b>Don't choose locations by foot traffic alone.</b> Revenue did not differ significantly across locations, so busier sites did not guarantee higher sales.</li>
+        <li><b>Consider product mix alongside location.</b> Revenue was more closely associated with price than with location, suggesting that product selection may be worth considering alongside location. However, this analysis cannot determine whether adding higher-priced products would increase profits because cost and customer demand data were not available.</li>
         <li><b>Match the event type to inventory goals.</b> Flash events and mobile trucks may be suitable for selling through limited stock quickly.</li>
-        <li><b>Limitations:</b> Because revenue is calculated as price × units sold, price's role is partly built into the outcome. The dataset may be synthetic, and rental cost data were unavailable.</li>
+        <li><b>Discussion:</b> The data also lacked cost information (rent, staffing, setup, and marketing expenses), profit margins, and customer-level metrics such as conversion rates. As a result, this analysis compares revenue rather than profitability. With these additional data, the next step would be to compare profitability across locations and examine how demand responds to price changes before making location or pricing decisions.</li>
+        <li><b>Limitations:</b> Revenue is price × units, so price's role is partly built in; The data may be synthetic.</li>
       </ul>
     </section>
 
