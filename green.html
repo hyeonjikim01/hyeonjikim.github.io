@@ -206,7 +206,8 @@
       <h2><span>03</span>Methodology &amp; Summary</h2>
       <ul>
         <li><b>Background:</b> First planned in a 2022 course with 2021 data, then rebuilt in R for 2021–2024.</li>
-        <li><b>Data:</b> Combined three Seoul Open Data Plaza datasets on park area, park area per capita, and resident satisfaction with green spaces, organized by district and year.</li>
+        <li><b>Data:</b> Three public datasets from the Seoul Open Data Plaza: park area, park area per person and a resident satisfaction survey.</li>
+        <li><b>Data integration:</b> The three tables had different layouts and multi-row headers. I wrote a reusable R function to reshape each table into a consistent format, with one row per district and year. I then joined them into a single dataset covering 25 districts over four years and verified that all districts were represented in every year.</li>
         <li><b>Measures:</b> Park area per capita (m²) assessed against the 6 m² standard, and the percentage of residents who were somewhat or very satisfied with green spaces.</li>
         <li><b>Analysis:</b> Examined the relationship between park area per person and resident satisfaction in each year, using a method less affected by extreme values in districts such as Jongno-gu. Also compared changes in park area and satisfaction from 2021 to 2024.</li>
       </ul>
@@ -231,7 +232,7 @@
           </tbody>
         </table>
       </div>
-      <p class="guide">rho ranges from −1 to 1; values near 0 mean no relationship; 0.05 would mean the relationship is unlikely to be due to chance.</p>
+      <p class="guide">Spearman’s ρ (rho) shows the strength and direction of the rank-based relationship (−1 to 1; values near 0 indicate a weak relationship). The p-value indicates how compatible the observed result is with the assumption of no relationship; p < 0.05 suggests that the observed relationship is statistically significant.</p>
       <figure>
         <img src="images/green-scatter-by-year.png" alt="Scatter plots of park area per person and satisfaction for each year from 2021 to 2024">
         <figcaption>Park area per person vs. satisfaction for each year. The points show no consistent pattern in any year.</figcaption>
