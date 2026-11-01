@@ -252,7 +252,7 @@
       <h2><span>05</span>From Prediction to Decision</h2>
       <ul>
         <li><b>Prioritize first-day monitoring.</b> ICU clinicians could use the risk score to watch high-risk patients more closely from day one.</li>
-        <li><b>Set the cutoff by the cost of a miss.</b> Missing a high-risk patient costs far more than an extra alert, so I chose the cutoff from the trade-off between missed deaths and false alarms, not from accuracy alone.</li>
+        <li><b>Show the trade-off behind the cutoff.</b> I chose the threshold that maximized the F1 score, balancing the need to identify patients who died against the risk of false alarms, rather than relying on accuracy or the default 0.5 threshold.</li>
         <li><b>Limitations:</b> data from one undisclosed source and per-seed thresholds still varied, so results use the five-seed average. Clinical use would need external validation and an agreed alert level.</li>
       </ul>
     </section>
